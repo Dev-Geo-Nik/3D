@@ -36,6 +36,7 @@ code {
     /* Typography */
     --spacing: 0.1rem;
     --line-height: 1.25;
+    --font-primary-1: "Roboto";
 }
 
 h1,
@@ -47,4 +48,21 @@ h5 {
     /* text-transform: capitalize; */
     /* line-height: var(--line-height); */
     /* margin-bottom: 0.75rem; */
+}
+
+.btn-cta {
+    color: #fff;
+    padding: 0.7rem 2.5rem;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+    background: #a238ff;
+    box-shadow: #a238ff 0px 0px 20px 2px;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.btn-cta:hover {
+    background: #fff;
+    color: #000;
 }

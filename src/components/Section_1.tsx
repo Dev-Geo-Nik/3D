@@ -1,27 +1,40 @@
-import { ContactShadows, OrbitControls } from '@react-three/drei';
+import { ContactShadows, GizmoHelper, OrbitControls, OrthographicCamera, PerspectiveCamera } from '@react-three/drei';
 import { Canvas } from '@react-three/fiber';
-import React, { Suspense } from 'react';
+import React, { Suspense, useRef, useState } from 'react';
 import styled from 'styled-components';
-import SmartWatch from './components/SmartWatch';
+import SmartWatch from './SmartWatch';
+import { GoThreeBars } from "react-icons/go";
+import { Mesh } from 'three';
+//@ts-ignore
+import logo from "../assets/logo.svg";
+
 
 const  Section_1 :React.FC = () => {
+
+ 
 
   return (
 <Section_1Element > 
         <div className="navigation">
-                <span className="logo">Logo</span>
-                <div className="menubar">X</div>
+                  <img src={logo} alt="TrackMate X product logo" />
+                    <GoThreeBars className="navbar-icon"/>
         </div>
         <div className="container">
               
-          <div className="html-container">
+          <div  className="html-container">
                 <h1>Own tour daily routine  with <span>TrackMate X</span> </h1>
-                <p>A health tracker that motivates you every step of the way</p>
-                <button className="cta">Buy Now</button>
+                <p>A fitness smartwatch  that motivates you every step of the way</p>
+                <button className="btn-cta">Buy Now</button>
           </div>
-            <Canvas  camera={{ fov: 75, near: 0.1, far: 1000, position: [0.5, 0, 1]  }} className="canvas" shadows={true}>
+            <Canvas  camera={{ fov: 75, near: 0.1, far: 1000, position:  [0.5, 0, 1]  }} className="canvas" shadows={true}>
                 <Suspense fallback={null}>
-                <OrbitControls/>
+                {/* <OrbitControls/> */}
+       
+
+     
+
+            
+              
                 <pointLight position={[20, 20, 20]} castShadow />
                 <ambientLight intensity={1} />
                 <directionalLight
@@ -37,8 +50,8 @@ const  Section_1 :React.FC = () => {
                   shadow-camera-bottom={-10}
                 />
                 <pointLight position={[-10,-10,15]} castShadow />
-                    <SmartWatch scale={10} position = {[0, 0.1, 0.3]} />
-                  
+                    <SmartWatch   scale={8} position = {[0.1, 0.1, 0.05]}  />
+                
                 </Suspense>
             </Canvas>
         </div>
@@ -53,8 +66,9 @@ export default Section_1;
 const Section_1Element = styled.div`
 
     
-    background: rgb(55,61,61);
-    background: linear-gradient(45deg, rgba(55,61,61,1) 14%, rgba(90,95,190,1) 50%, rgba(150,84,184,1) 91%); 
+
+    background: rgb(35,35,35);
+    background: linear-gradient(38deg, rgba(35,35,35,1) 27%, rgba(40,42,141,1) 54%, rgba(150,84,184,1) 91%); 
     min-height: 100vh;
 
 
@@ -80,19 +94,35 @@ const Section_1Element = styled.div`
       justify-self: center;
     }
     .html-container h1{
-      
+        font-family: var(--font-primary-1);
+        color:#fff;
+        font-size:2.5rem;
     }
+
     .html-container p{
-        margin: 1rem 0;
+        margin: 1rem 0 2rem 0;
+        font-size: 1.7rem;
+        color:#fff;
     }
 
-    button{ 
-      background: #8632D0;
+    .html-container span {
       color: #fff;
-      padding:0.7rem 2.5rem;
-      border-radius:15px;
-      border: none;
-      cursor: pointer;
+      text-shadow:
+      0 0 5px #a238ff,
+      0 0 10px #a238ff,
+      0 0 20px #a238ff,
+      0 0 40px #a238ff,
+      0 0 80px #a238ff,
+      0 0 90px #0ff,
+      0 0 100px #0ff,
+      0 0 150px #0ff;
 
     }
+
+    .navbar-icon{
+      font-size:3rem;
+      color: #fff;
+    }
+
+ 
 `
