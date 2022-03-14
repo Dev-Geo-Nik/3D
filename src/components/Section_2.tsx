@@ -4,12 +4,12 @@ import styled from 'styled-components';
 //@ts-ignore
 import dumbbell from "../assets/dumbbell.svg";
 //@ts-ignore
-import cellphone_smartwatch from "../assets/cellphone-smartwatch.svg";
-// import DumbbellSvg from './util/SVG/Dumbbell';
+import cellphone_smartwatch from "../assets/cellphone-smartwatch2.svg";
+import DumbbellSvg from './util/DumbbellSvg';
 const fitnessModel = require('../assets/model.webp');
 
 
-const fill =" rgba(150,84,184,1) ";
+
 
 const  Section_2 :React.FC = () => {
 
@@ -22,11 +22,12 @@ const  Section_2 :React.FC = () => {
               <img src={fitnessModel} alt="" />
                <div className="text-container">
                   <div>
-                    <img src={dumbbell} alt="" className="dumbbell-icon"/>
+                
+                    <DumbbellSvg  className="dumbbell-icon" width="180px" height="123"/>
                     <span>WORKOUT TRACKING</span>
                   </div>
                   <p>Fine Tune Your Routine With Precise Workout Stats</p>
-                  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas magnam tempora aspernatur impedit ea vel debitis culpa dolor in officiis.</p>
+                  {/* <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas magnam tempora aspernatur impedit ea vel debitis culpa dolor in officiis.</p> */}
                </div>
           </div>
           <div className="container-2">
@@ -45,9 +46,10 @@ export default Section_2;
 const Section_2Element = styled.div`
      min-height: 80vh;
       position: relative;
-     display: grid;
+       display: grid;
       grid-template-columns: 70% 30%;
       background: #222323;
+      padding: 6rem 0;
 
  
 
@@ -66,8 +68,8 @@ const Section_2Element = styled.div`
 
     .container-2{
       /* max-width: 30%; */
-      background: rgb(35,35,35);
-      background: linear-gradient(-160deg, rgba(35,35,35,1) 27%, rgba(40,42,141,1) 54%, rgba(150,84,184,1) 91%); 
+      background: rgb(118,77,128);  
+      background: linear-gradient(21deg, rgba(118,77,128,1) 13%, rgba(115,80,126,1) 49%, rgba(48,50,50,1) 74%); 
       margin-left: 4rem;
     }
 
@@ -82,33 +84,38 @@ const Section_2Element = styled.div`
       
         z-index: 3;
         background: rgb(34,35,35);
-background: linear-gradient(94deg, rgba(34,35,35,1) 10%, rgba(101,103,103,0.3) 54%); 
- 
+        background: linear-gradient(94deg, rgba(34,35,35,1) 10%, rgba(101,103,103,0.3) 54%); 
+        
     
     }
 
     .text-container{
       position: absolute;
       top: 20%;
-      left: 20%;
+      left: 5%;
       z-index: 3;
-      background: rgba(255,255,255,1);
-      width: 40rem;
+      color:#fff;
+    
+      letter-spacing: var(--spacing);
       /* width:%; */
     }
 
     .text-container div{
         display:flex;
         align-items: center; 
+       
     }
 
     .text-container div span{
       width: 100%;
       font-size:1.5rem;
+      font-weight: bold;
      
     
     }
     p:nth-of-type(1) {
+      font-size: 4rem;
+      margin-bottom: 1rem;
    
     }
     p:nth-of-type(2) {
@@ -117,17 +124,16 @@ background: linear-gradient(94deg, rgba(34,35,35,1) 10%, rgba(101,103,103,0.3) 5
 
 
     .dumbbell-icon{
-      /* width: 1rem; */
-      height: 6rem;
-      display: inline-block;
+   
+    
     
     } 
 
    
     .cellphone-smartwatch{
       position: absolute;
-      top:10%;
-      right:15%;
+      top:20%;
+      right:14%;
       z-index: 3;
     }
 `

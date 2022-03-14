@@ -18,10 +18,12 @@ const  SmartWatch :React.FC<Props> = ({scale,position}) => {
     // const gltf = useLoader(GLTFLoader, './smart_watch/scene.gltf')
     const gltf = useLoader(GLTFLoader, './smartwatch/scene.gltf')
     // const gltf = useLoader(GLTFLoader, './talkband_b2/scene.gltf')
-
+    
+    console.log(gltf)
+    const {defines} = gltf.materials.Rubber;
     useFrame(()=>{
       if (refWatch.current ) {
-        
+      
          refWatch.current.rotation.y += 0.0055;
         // refWatch.current.rotation.z += -0.005;
   
@@ -36,7 +38,7 @@ const  SmartWatch :React.FC<Props> = ({scale,position}) => {
    
     return (
       <Suspense fallback={null} >
-        <primitive  object={gltf.scene} scale={scale} ref={refWatch} receiveShadow position={position} onPointerOver={()=>setHovered(true)} onPointerOut={()=>setHovered(false)}/>
+        <primitive  object={gltf.scene} scale={scale} ref={refWatch} receiveShadow position={position} onPointerOver={()=>setHovered(true)} onPointerOut={()=>setHovered(false)} />
       </Suspense>
     )
 }

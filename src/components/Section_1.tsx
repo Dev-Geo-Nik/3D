@@ -7,6 +7,9 @@ import { GoThreeBars } from "react-icons/go";
 import { Mesh } from 'three';
 //@ts-ignore
 import logo from "../assets/logo.svg";
+//@ts-ignore
+import background from "../assets/background.webp";
+import ModelTest from './ModelTest';
 
 
 const  Section_1 :React.FC = () => {
@@ -22,7 +25,7 @@ const  Section_1 :React.FC = () => {
         <div className="container">
               
           <div  className="html-container">
-                <h1>Own tour daily routine  with <span>TrackMate X</span> </h1>
+                <h1>Own your daily routine  with <span>TrackMate X</span> </h1>
                 <p>A fitness smartwatch  that motivates you every step of the way</p>
                 <button className="btn-cta">Buy Now</button>
           </div>
@@ -49,9 +52,9 @@ const  Section_1 :React.FC = () => {
                   shadow-camera-top={10}
                   shadow-camera-bottom={-10}
                 />
-                <pointLight position={[-10,-10,15]} castShadow />
-                    <SmartWatch   scale={8} position = {[0.1, 0.1, 0.05]}  />
-                
+                <pointLight position={[10,10,15]} castShadow />
+                    {/* <SmartWatch   scale={8} position = {[0.1, 0.1, 0.05]}  /> */}
+                    <ModelTest position={[0,0,0]} scale={8} rotation={[0,0.5,0]}/>
                 </Suspense>
             </Canvas>
         </div>
@@ -66,9 +69,9 @@ export default Section_1;
 const Section_1Element = styled.div`
 
     
-
-    background: rgb(35,35,35);
-    background: linear-gradient(38deg, rgba(35,35,35,1) 27%, rgba(40,42,141,1) 54%, rgba(150,84,184,1) 91%); 
+      background-image: url(${background} );
+    /* background: rgb(35,35,35);
+    background: linear-gradient(38deg, rgba(35,35,35,1) 27%, rgba(40,42,141,1) 54%, rgba(150,84,184,1) 91%);  */
     min-height: 100vh;
 
 
