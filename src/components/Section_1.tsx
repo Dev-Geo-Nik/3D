@@ -14,10 +14,11 @@ import ModelTest from './ModelTest';
 
 const  Section_1 :React.FC = () => {
 
+  const [hovered, setHovered] = useState(false)
  
-
   return (
 <Section_1Element > 
+        <img src={background} alt="" className="background-image" />
         <div className="navigation">
                   <img src={logo} alt="TrackMate X product logo" />
                     <GoThreeBars className="navbar-icon"/>
@@ -29,7 +30,7 @@ const  Section_1 :React.FC = () => {
                 <p>A fitness smartwatch  that motivates you every step of the way</p>
                 <button className="btn-cta">Buy Now</button>
           </div>
-            <Canvas  camera={{ fov: 75, near: 0.1, far: 1000, position:  [0.5, 0, 1]  }} className="canvas" shadows={true}>
+            <Canvas  camera={{ fov: 75, near: 0.1, far: 1000, position:  [0.5, 0, 1]  }} className="canvas" shadows={true} >
                 <Suspense fallback={null}>
                 {/* <OrbitControls/> */}
        
@@ -54,14 +55,16 @@ const  Section_1 :React.FC = () => {
                 />
                 <pointLight position={[10,10,15]} castShadow />
                     {/* <SmartWatch   scale={8} position = {[0.1, 0.1, 0.05]}  /> */}
-                    <ModelTest position={[0,0,0]} scale={8} rotation={[0,0.5,0]}/>
+                    <ModelTest position={[0,0,0]} scale={hovered ? 10:8} rotation={[0,0,0]} onPointerOver={()=>setHovered(true)} onPointerOut={()=>setHovered(false)}/>
                 </Suspense>
             </Canvas>
         </div>
-        
+      
 </Section_1Element >
 );
 };
+
+
 
 export default Section_1;
 
@@ -69,11 +72,18 @@ export default Section_1;
 const Section_1Element = styled.div`
 
     
-      background-image: url(${background} );
-    /* background: rgb(35,35,35);
-    background: linear-gradient(38deg, rgba(35,35,35,1) 27%, rgba(40,42,141,1) 54%, rgba(150,84,184,1) 91%);  */
-    min-height: 100vh;
+ 
 
+min-height: 100vh;
+
+.background-image{
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        position: absolute;
+        z-index:-2;
+      }
 
     .navigation{
        display: flex;

@@ -15,10 +15,11 @@ const  Section_2 :React.FC = () => {
 
   return (
     <Section_2Element >
-           <div className="model"></div>
+
        
 
           <div className="container-1">
+              <div className="model"></div>
               <img src={fitnessModel} alt="" />
                <div className="text-container">
                   <div>
@@ -45,7 +46,7 @@ export default Section_2;
 
 const Section_2Element = styled.div`
      min-height: 80vh;
-      position: relative;
+  
        display: grid;
       grid-template-columns: 70% 30%;
       background: #222323;
@@ -56,6 +57,7 @@ const Section_2Element = styled.div`
  
 
     .container-1{
+      position: relative;
       /* max-width: 70%; */
       background: #222323;
       position: relative;
@@ -66,17 +68,12 @@ const Section_2Element = styled.div`
     }
 
 
-    .container-2{
-      /* max-width: 30%; */
-      background: rgb(118,77,128);  
-      background: linear-gradient(21deg, rgba(118,77,128,1) 13%, rgba(115,80,126,1) 49%, rgba(48,50,50,1) 74%); 
-      margin-left: 4rem;
-    }
+  
 
     .model{
-      width: 100%;
-      min-height: 80vh;
-      position: absolute;
+      /* width: 100%; */
+      /* min-height: 80vh; */
+        position: absolute;
         top: 0;
         left: 0;
         right: 0;
@@ -122,18 +119,20 @@ const Section_2Element = styled.div`
      
     }
 
-
-    .dumbbell-icon{
-   
-    
-    
-    } 
+    .container-2{
+      /* max-width: 30%; */
+      background: rgb(118,77,128);  
+      background: linear-gradient(21deg, rgba(118,77,128,1) 13%, rgba(115,80,126,1) 49%, rgba(48,50,50,1) 74%); 
+      margin-left: 4rem;
+    }
 
    
     .cellphone-smartwatch{
-      position: absolute;
-      top:20%;
+      /* position: absolute; */
+      /* top:20%;
       right:14%;
-      z-index: 3;
+      z-index: 3; */
+      max-width: 100%;
+      margin-top: 5rem;
     }
 `

@@ -23,9 +23,9 @@ code {
 
     --clr-primary-4: #2086ec;
     --clr-primary-5: #e0a53f;
-    --clr-primary-6: #d10024;
+    --clr-primary-6: #b30320;
     --clr-primary-7: #24292e;
-    --clr-primary-8: #35613e;
+    --clr-primary-8: #ecea4a;
 
     /* Text colors  and Tags*/
     --clr-text-1: #aaaaaa;
@@ -52,7 +52,7 @@ h5 {
 
 .btn-cta {
     color: #fff;
-    padding: 0.7rem 2.5rem;
+    padding: 1rem 3rem;
     border-radius: 15px;
     border: none;
     cursor: pointer;

@@ -41,7 +41,7 @@ export default Section_3;
 
 
 const Section_3Element = styled.div`
-       
+        /* min-height: 80vh; */
         color:#fff;
         letter-spacing: var(--spacing);
         position: relative;
@@ -60,9 +60,11 @@ const Section_3Element = styled.div`
         .parallax{
             background-image: url(${background} );
             background-size: cover;
+            /* min-height: 80vh; */
+            min-width: 100%;
+            height: auto;
             background-attachment:fixed;
-            height: 80vh;
-            display:grid;
+            /* display:grid; */
     
         
         

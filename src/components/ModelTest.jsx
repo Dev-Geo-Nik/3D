@@ -15,7 +15,7 @@ export default function ModelTest({ ...props}) {
         if (group.current ) {
           // group.current.rotation.y += 0.0055;
             
-          // group.current.position.z = Math.sin(clock.getElapsedTime()) * 0.08;
+          group.current.position.z = Math.sin(clock.getElapsedTime()) * 0.08;
       }
       })
 
@@ -24,7 +24,7 @@ export default function ModelTest({ ...props}) {
 
     <group ref={group} {...props} dispose={null} castShadow={true} >
       <mesh geometry={nodes.Cube002.geometry} material={materials.Glass} material-color = "#000"/>
-      <mesh geometry={nodes.Cube002_1.geometry} material={materials.Frame}  material-color="#401760"/>
+      <mesh geometry={nodes.Cube002_1.geometry} material={materials.Frame} />
       <mesh geometry={nodes.Cube002_2.geometry} material={materials.GlassBack} />
       <mesh
         geometry={nodes.BandTop.geometry}
