@@ -10,6 +10,8 @@ import smartwatchLightBlue from "../../assets/smartwatches/light-blue.svg"
 import smartwatchGreen from "../../assets/smartwatches/green.svg"
 //@ts-ignore
 import smartwatchGrey from "../../assets/smartwatches/grey.svg"
+//@ts-ignore
+
 
 
 

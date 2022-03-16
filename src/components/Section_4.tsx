@@ -2,6 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 //@ts-ignore
 import smartwatchesBackground from "../assets/smartwatches-background.png";
+//@ts-ignore
+import eyeImage from "../assets/eye-image.png";
 import EyeSvg from './util/EyeSvg';
 import { smartwatchBlue, smartwatchGreen, smartwatchRed, smartwatchYellow,smartwatchLightBlue, smartwatchGrey } from './util/images';
 
@@ -10,7 +12,8 @@ const  Section_4 :React.FC = () => {
   return (
 <Section_4Element >
          
-            <EyeSvg/>
+            {/* <EyeSvg/> */}
+            <img src={eyeImage} alt="" />
              <h2>Match Your TrackMate X to Your Style</h2>
              <div className="smartwatches-container">
                  <img src={smartwatchRed} alt="" />
@@ -33,22 +36,27 @@ export default Section_4;
 const Section_4Element = styled.div`
 
         position:  relative;
-        display: flex;
+        /* display: flex;
         flex-direction: column;
-        align-items: center; 
+        align-items: center;  */
         /* justify-content: flex-start; */
-        min-height:100vh;
+        /* min-height:100vh; */
         overflow: hidden;
+        padding-bottom: 5rem;
+        text-align: center;
 
     h2{
         font-size: 3rem;
         color:#fff;
+        
     }
 
     .smartwatches-container{
-            margin-top: 2rem;
+        margin-top: 2rem;
         display: grid;
-        grid-template-columns: repeat(3,1fr);
+       
+        grid-template-columns: repeat(auto-fit,minmax(10rem,1fr));
+        /* grid-template-columns: repeat(3,1fr); */
     }
     .smartwatches-container img{
         
@@ -68,7 +76,10 @@ const Section_4Element = styled.div`
         bottom: 0;
         right: 0;
         z-index: -2;
-  
+        width: 100%;
+        height: 100%;
+    
+        
      
       
     }

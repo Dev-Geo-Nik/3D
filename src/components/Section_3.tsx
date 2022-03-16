@@ -4,7 +4,12 @@ import styled from 'styled-components';
 import cellphone_smartwatch from "../assets/cellphone-smartwatch.svg";
 import NotificationsSvg from './util/NotificationsSvg';
 //@ts-ignore
+import alert from "../assets/alert.png";
+//@ts-ignore
 import background from "../assets/person-1.webp";
+
+//@ts-ignore
+import notifications from "../assets/notifications.png";
 import AlertSvg from './util/AlertSvg';
 
 
@@ -19,14 +24,14 @@ const  Section_3 :React.FC = () => {
                     <div className="parallax">
                         <div className="container-1">
                             <div>
-                                <NotificationsSvg/>
+                                <img src={notifications} alt="" />
                                 <span>NOTIFICATION SYSTEM</span>
                             </div>
                             <p>Helpful Reminders To Keep You on Track</p>
                         </div>  
                         <div className="container-2">
                             <div>
-                                <AlertSvg/>
+                                <img src={alert} alt="" />
                                 <span>ALERT SYSTEM</span>
                                 </div>
                                 <p>Let Your Body Be Your Guide</p>
@@ -59,9 +64,7 @@ const Section_3Element = styled.div`
        
         .parallax{
             background-image: url(${background} );
-            background-size: cover;
-            /* min-height: 80vh; */
-            min-width: 100%;
+            background-size: 100% 100%;
             height: auto;
             background-attachment:fixed;
             /* display:grid; */

@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 // import { FaDumbbell } from "react-icons/fa";
 //@ts-ignore
-import dumbbell from "../assets/dumbbell.svg";
+import dumbbell from "../assets/dumbbell.png";
 //@ts-ignore
 import cellphone_smartwatch from "../assets/cellphone-smartwatch2.svg";
 import DumbbellSvg from './util/DumbbellSvg';
@@ -24,7 +24,8 @@ const  Section_2 :React.FC = () => {
                <div className="text-container">
                   <div>
                 
-                    <DumbbellSvg  className="dumbbell-icon" width="180px" height="123"/>
+                    {/* <DumbbellSvg  className="dumbbell-icon" width="180px" height="123"/> */}
+                    <img src={dumbbell} alt="" />
                     <span>WORKOUT TRACKING</span>
                   </div>
                   <p>Fine Tune Your Routine With Precise Workout Stats</p>
@@ -45,7 +46,7 @@ export default Section_2;
 
 
 const Section_2Element = styled.div`
-     min-height: 80vh;
+     /* min-height: 80vh; */
   
        display: grid;
       grid-template-columns: 70% 30%;
@@ -65,6 +66,7 @@ const Section_2Element = styled.div`
     
     .container-1 img{
       width:100%;
+      height: 100%;
     }
 
 
@@ -80,9 +82,9 @@ const Section_2Element = styled.div`
         bottom: 0;
       
         z-index: 3;
-        background: rgb(34,35,35);
-        background: linear-gradient(94deg, rgba(34,35,35,1) 10%, rgba(101,103,103,0.3) 54%); 
-        
+        /* background: rgb(34,35,35); */
+        background: linear-gradient(94deg, rgba(34,35,35,1) 15%, rgba(101,103,103,0.3) 54%); 
+        /* overflow: hidden; */
     
     }
 
@@ -107,12 +109,15 @@ const Section_2Element = styled.div`
       width: 100%;
       font-size:1.5rem;
       font-weight: bold;
+      /* font-size:1rem; */
      
     
     }
     p:nth-of-type(1) {
       font-size: 4rem;
       margin-bottom: 1rem;
+      /* font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width]))); */
+      /* font-size: 1.5rem; */
    
     }
     p:nth-of-type(2) {
@@ -133,6 +138,15 @@ const Section_2Element = styled.div`
       right:14%;
       z-index: 3; */
       max-width: 100%;
+      /* height: 100%; */
       margin-top: 5rem;
+    }
+
+
+   .text-container img{
+       width: 15rem;
+       /* width: 5rem; */
+       /* height: 1rem; */
+      /* display: none; */
     }
 `

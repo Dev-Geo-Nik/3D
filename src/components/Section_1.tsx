@@ -34,11 +34,6 @@ const  Section_1 :React.FC = () => {
                 <Suspense fallback={null}>
                 {/* <OrbitControls/> */}
        
-
-     
-
-            
-              
                 <pointLight position={[20, 20, 20]} castShadow />
                 <ambientLight intensity={1} />
                 <directionalLight
@@ -83,6 +78,8 @@ min-height: 100vh;
         bottom: 0;
         position: absolute;
         z-index:-2;
+        width: 100%;
+        height: 100%;
       }
 
     .navigation{
@@ -94,8 +91,10 @@ min-height: 100vh;
 
     .container{
       display: grid;
+      /* grid-template-columns: repeat(auto-fit,minmax(50%,1fr)); */
       grid-template-columns: 1fr 1fr;
       min-height: 90vh;
+    
     }
 
     .canvas{
@@ -110,6 +109,7 @@ min-height: 100vh;
         font-family: var(--font-primary-1);
         color:#fff;
         font-size:2.5rem;
+        /* font-size:2.5rem; */
     }
 
     .html-container p{
