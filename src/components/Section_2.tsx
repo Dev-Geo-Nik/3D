@@ -2,10 +2,10 @@ import React from 'react';
 import styled from 'styled-components';
 // import { FaDumbbell } from "react-icons/fa";
 //@ts-ignore
-import dumbbell from "../assets/dumbbell.png";
+import dumbbell from "../assets/icons/dumbbell.png";
 //@ts-ignore
 import cellphone_smartwatch from "../assets/cellphone-smartwatch2.svg";
-import DumbbellSvg from './util/DumbbellSvg';
+
 const fitnessModel = require('../assets/model.webp');
 
 
@@ -46,7 +46,7 @@ export default Section_2;
 
 
 const Section_2Element = styled.div`
-     /* min-height: 80vh; */
+
   
        display: grid;
       grid-template-columns: 70% 30%;
@@ -67,6 +67,7 @@ const Section_2Element = styled.div`
     .container-1 img{
       width:100%;
       height: 100%;
+      border-radius: 10px;
     }
 
 
@@ -85,6 +86,7 @@ const Section_2Element = styled.div`
         /* background: rgb(34,35,35); */
         background: linear-gradient(94deg, rgba(34,35,35,1) 15%, rgba(101,103,103,0.3) 54%); 
         /* overflow: hidden; */
+        border-radius: 10px;
     
     }
 
@@ -131,6 +133,7 @@ const Section_2Element = styled.div`
       background: rgb(118,77,128);  
       background: linear-gradient(21deg, rgba(118,77,128,1) 13%, rgba(115,80,126,1) 49%, rgba(48,50,50,1) 74%); 
       margin-left: 4rem;
+      border-radius: 10px;
     }
 
    
@@ -147,6 +150,7 @@ const Section_2Element = styled.div`
 
    .text-container img{
        width: 15rem;
+    
        /* width: 5rem; */
        /* height: 1rem; */
       /* display: none; */

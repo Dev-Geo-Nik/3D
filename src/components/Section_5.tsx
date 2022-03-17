@@ -5,13 +5,13 @@ import background from "../assets/background-2.png";
 //@ts-ignore
 import TrackMateX from "../assets/TrackMateX.svg";
 //@ts-ignore
-import battery from "../assets/battery.png";
+import battery from "../assets/icons/battery.png";
 //@ts-ignore
-import bluetooth from "../assets/bluetooth.png";
+import bluetooth from "../assets/icons/bluetooth.png";
 //@ts-ignore
-import wireless from "../assets/wireless.png";
+import wireless from "../assets/icons/wireless.png";
 //@ts-ignore
-import water from "../assets/water.png";
+import water from "../assets/icons/water.png";
 
 
 
@@ -54,6 +54,7 @@ const Section_5Element = styled.div`
     position: relative;
     height: 100%;
     /* width: 100%; */
+    
 
 
 

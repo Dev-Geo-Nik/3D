@@ -1,16 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
+
 //@ts-ignore
-import cellphone_smartwatch from "../assets/cellphone-smartwatch.svg";
-import NotificationsSvg from './util/NotificationsSvg';
-//@ts-ignore
-import alert from "../assets/alert.png";
+import alert from "../assets/icons/alert.png";
 //@ts-ignore
 import background from "../assets/person-1.webp";
 
 //@ts-ignore
-import notifications from "../assets/notifications.png";
-import AlertSvg from './util/AlertSvg';
+import notifications from "../assets/icons/notifications.png";
+
 
 
 

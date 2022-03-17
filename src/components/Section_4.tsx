@@ -3,8 +3,7 @@ import styled from 'styled-components';
 //@ts-ignore
 import smartwatchesBackground from "../assets/smartwatches-background.png";
 //@ts-ignore
-import eyeImage from "../assets/eye-image.png";
-import EyeSvg from './util/EyeSvg';
+import eyeImage from "../assets/icons/eye-image.png";
 import { smartwatchBlue, smartwatchGreen, smartwatchRed, smartwatchYellow,smartwatchLightBlue, smartwatchGrey } from './util/images';
 
 const  Section_4 :React.FC = () => {
@@ -23,7 +22,8 @@ const  Section_4 :React.FC = () => {
                  <img src={smartwatchGrey} alt="" />
                  <img src={smartwatchLightBlue} alt="" />
              </div>
-            <img src={smartwatchesBackground} alt="" className="background-img" />
+       
+
              <button className="btn-cta">Buy Now</button>
        
 </Section_4Element >
@@ -41,9 +41,13 @@ const Section_4Element = styled.div`
         align-items: center;  */
         /* justify-content: flex-start; */
         /* min-height:100vh; */
-        overflow: hidden;
+        /* overflow: hidden; */
         padding-bottom: 5rem;
         text-align: center;
+        width: 100%;
+
+        background: rgb(118,77,128);  
+      background: linear-gradient(21deg, rgba(118,77,128,1) 13%, rgba(115,80,126,1) 49%, rgba(48,50,50,1) 74%); 
 
     h2{
         font-size: 3rem;
@@ -79,6 +83,7 @@ const Section_4Element = styled.div`
         z-index: -2;
         width: 100%;
         height: 100%;
+        /* display: block; */
     
         
      

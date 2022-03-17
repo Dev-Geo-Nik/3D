@@ -2,26 +2,38 @@ import { ContactShadows, GizmoHelper, OrbitControls, OrthographicCamera, Perspec
 import { Canvas } from '@react-three/fiber';
 import React, { Suspense, useRef, useState } from 'react';
 import styled from 'styled-components';
-import SmartWatch from './SmartWatch';
-import { GoThreeBars } from "react-icons/go";
-import { Mesh } from 'three';
+// import SmartWatch from './SmartWatch';
+// import { GoThreeBars } from "react-icons/go";
+import { FaShoppingCart, FaUserCircle } from "react-icons/fa";
+// import { Mesh } from 'three';
 //@ts-ignore
 import logo from "../assets/logo.svg";
 //@ts-ignore
-import background from "../assets/background.webp";
+import background from "../assets/icons/background.png";
 import ModelTest from './ModelTest';
+import { BiShoppingBag } from "react-icons/bi";
 
 
 const  Section_1 :React.FC = () => {
 
   const [hovered, setHovered] = useState(false)
- 
+  
   return (
 <Section_1Element > 
         <img src={background} alt="" className="background-image" />
         <div className="navigation">
                   <img src={logo} alt="TrackMate X product logo" />
-                    <GoThreeBars className="navbar-icon"/>
+                  <div className="navigation-icons">
+                      <div className="login-container" >
+                         <FaUserCircle className="login-icon"/> 
+                         <div className="login-text">Log in</div>
+                      </div>
+                      <div className="cart-container">
+                        <FaShoppingCart className='cart-icon'/>
+                        
+                          <div className='cart-number'>0</div>
+                        </div>
+                  </div>
         </div>
         <div className="container">
               
@@ -85,8 +97,55 @@ const Section_1Element = styled.div`
     .navigation{
        display: flex;
        justify-content: space-between;
+       align-items: center;
        padding: 2rem 4rem;
        min-height: 10vh;
+    }
+
+    .navigation-icons{
+      display: flex;
+      /* width: 30%; */
+    }
+
+    .login-container{
+      
+      color: #fff;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+    }
+
+    .login-icon{
+      font-size: 3rem;
+      
+    }
+    .login-text{
+      font-size: 2rem;
+      margin: 0 2rem;
+    }
+
+
+    .cart-container{
+      margin-top: 1rem;
+      position: relative;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    .cart-icon{
+      font-size: 2.5rem;
+      /* display: block; */
+    }
+
+    .cart-number{
+      font-size: 1rem;
+      position: absolute;
+      top: -2rem;
+      right:0.5rem;
+      color: #a238ff;
+      font-size:1.7rem;
+      font-weight: bold;
+
     }
 
     .container{
