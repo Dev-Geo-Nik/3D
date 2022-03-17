@@ -67,9 +67,9 @@ export default Section_1;
 const Section_1Element = styled.div`
 
     
- 
+ /* background: #333; */
 
-min-height: 100vh;
+  height: 100vh;
 
 .background-image{
         top: 0;
@@ -99,16 +99,20 @@ min-height: 100vh;
 
     .canvas{
         /* background:#eee; */
+        
+
     }
 
     .html-container{
       align-self: center;
       justify-self: center;
+      /* margin-left:4rem; */
     }
     .html-container h1{
         font-family: var(--font-primary-1);
         color:#fff;
         font-size:2.5rem;
+        
         /* font-size:2.5rem; */
     }
 

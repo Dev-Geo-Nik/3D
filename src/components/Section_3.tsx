@@ -76,19 +76,20 @@ const Section_3Element = styled.div`
 
         .container-1{
            padding: 4rem;
+           margin-left:4rem;
         }
         .container-1 div{
             display: flex;
             align-items: center;
-         
+           
         }
 
-        .container-1 p{
-            font-size: 2.5rem;
-        }
+       
 
+    
         .container-2{
             padding: 4rem;
+            margin-left:4rem;
         }
 
         .container-2 div{
@@ -96,12 +97,18 @@ const Section_3Element = styled.div`
             align-items: center;
         }
 
-        .container-2 p{
-            font-size: 2.5rem;
-        }
+      
 
         span{ 
-            font-size:1.5rem;
+            /* font-size:1.5rem; */
             font-weight: bold;
+            font-size: clamp(0.2rem, 0.5rem + 2vw, 5rem);
         }
+
+        p{
+            /* font-size: 2.5rem; */
+            font-size: clamp(0.2rem, 0.5rem + 2vw, 5rem);
+        }
+
+       
 `

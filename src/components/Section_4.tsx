@@ -48,6 +48,7 @@ const Section_4Element = styled.div`
     h2{
         font-size: 3rem;
         color:#fff;
+        font-size: clamp(0.2rem, 0.5rem + 2vw, 5rem);
         
     }
 

@@ -28,7 +28,7 @@ const  Section_2 :React.FC = () => {
                     <img src={dumbbell} alt="" />
                     <span>WORKOUT TRACKING</span>
                   </div>
-                  <p>Fine Tune Your Routine With Precise Workout Stats</p>
+                  <p className="text-test">Fine Tune Your Routine With Precise Workout Stats</p>
                   {/* <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas magnam tempora aspernatur impedit ea vel debitis culpa dolor in officiis.</p> */}
                </div>
           </div>
@@ -94,7 +94,7 @@ const Section_2Element = styled.div`
       left: 5%;
       z-index: 3;
       color:#fff;
-    
+      margin-left:4rem;
       letter-spacing: var(--spacing);
       /* width:%; */
     }
@@ -118,7 +118,9 @@ const Section_2Element = styled.div`
       margin-bottom: 1rem;
       /* font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width]))); */
       /* font-size: 1.5rem; */
-   
+    
+  
+    
     }
     p:nth-of-type(2) {
      
@@ -137,7 +139,7 @@ const Section_2Element = styled.div`
       /* top:20%;
       right:14%;
       z-index: 3; */
-      max-width: 100%;
+      width: 100%;
       /* height: 100%; */
       margin-top: 5rem;
     }
